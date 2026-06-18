@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Reviews</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 10px auto;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn {
+      padding: 8px 12px;
+      margin-right: 5px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .delete {
+      background: red;
+      color: white;
+    }
+
+    .edit {
+      background: orange;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>📢 All Reviews</h2>
+
+<div id="reviews">Loading reviews...</div>
+
+<script>
+
+const API_URL = "https://script.google.com/macros/s/AKfycbxKTq0W8zVigin-wYby7uf6xFoH5LUXd2Af_S-WoijW7mw_5C6pTcfvc4kbQs2PCk9k/exec";
+
+// 🔹 Load Reviews
+function loadReviews() {
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(data => {
+
+      let html = "";
+
+      data.forEach(item => {
+        html += `
+          <div class="card">
+            <h3>${item.name}</h3>
+            <p>${item.review}</p>
+            <p>⭐ Rating: ${item.rating}</p>
+            <p>🕒 ${item.date}</p>
+
+            <button class="btn delete" onclick="deleteReview(${item.row})">Delete</button>
+            <button class="btn edit" onclick="editReview(${item.row}, '${item.name}', '${item.review}', '${item.rating}')">Edit</button>
+          </div>
+        `;
+      });
+
+      document.getElementById("reviews").innerHTML = html;
+    });
+}
+
+// 🔹 Delete Review
+function deleteReview(row) {
+  fetch(API_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      action: "delete",
+      row: row
+    })
+  })
+  .then(() => loadReviews());
+}
+
+// 🔹 Edit Review
+function editReview(row, name, review, rating) {
+
+  let newReview = prompt("Edit Review:", review);
+
+  if (newReview !== null) {
+
+    fetch(API_URL, {
+      method: "POST",
+      body: JSON.stringify({
+        action: "update",
+        row: row,
+        name: name,
+        review: newReview,
+        rating: rating
+      })
+    })
+    .then(() => loadReviews());
+  }
+}
+
+// 🔹 Auto load when page opens
+loadReviews();
+
+</script>
+
+</body>
+</html>

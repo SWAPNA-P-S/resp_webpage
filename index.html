@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie recommendation</title>
+</head>
+<body bgcolor="#242424" text="white">
+
+ 
+<center>
+
+    <h1>
+        <font color="magenta" size="7" face="Comic Sans MS">
+            🎬 Movie Recommendation Hub 🎬
+        </font>
+    </h1>
+
+    <h3>
+        <font color="blue" face="Verdana">
+            Discover • Review • Recommend
+        </font>
+    </h3>
+
+</center>
+
+<marquee>
+    ⭐ Explore the latest movies | Watch trailers | Share your reviews ⭐
+</marquee>
+
+<hr>
+<center> 
+<h2>
+    <font color="purple">Featured Movies</font>
+</h2>
+</center>
+
+<center>
+    <img src="inception.jpg"
+         alt="Inception"
+         width="200"
+         height="300">
+
+    <img src="spiderman.jpg"
+         alt="spiderman : no way home"
+        width="200"
+        height="300">
+         
+
+    <img src="interstellar.jpg"
+         alt="Interstellar"
+         width="200"
+         height="300">
+
+    <img src="avangers.jpg"
+         alt="Avengers Endgame"
+         width="200"
+         height="300">
+
+    <img src="joker.jpg"
+         alt="Joker"
+         width="200"
+         height="300">
+
+</center>
+
+<br>
+
+<center>
+<marquee>
+    <a href=" https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm"
+       target="joker_trailer">||
+        Watch Joker Trailer||
+    <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm"
+       target="interstellar_trailer">||
+        Watch Interstellar Trailer||
+    <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" 
+         target="avengers_trailer">||
+        Watch Avengers Trailer ||
+       
+    </a>
+</marquee> 
+</center>
+
+<hr>
+<h2>
+    <font color="green">Popular Movie Recommendations</font>
+</h2>
+<ul>
+    <li>Interstellar</li>
+    <li>Avengers: Endgame</li>
+    <li>Joker</li>
+    <li>Inception</li>
+    <li>Spider-Man: No Way Home</li>
+</ul>
+  
+<hr>
+<h2>
+    <font color="brown">Recent Movie Collection</font>
+</h2>
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>Movie Name</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Rating</th>
+    </tr>
+
+    <tr>
+        <td>Interstellar</td>
+        <td>Sci-Fi</td>
+        <td>2014</td>
+        <td>9.5/10</td>
+    </tr>
+
+    <tr>
+        <td>Avengers: Endgame</td>
+        <td>Action</td>
+        <td>2019</td>
+        <td>9/10</td>
+    </tr>
+
+    <tr>
+        <td>Joker</td>
+        <td>Drama</td>
+        <td>2019</td>
+        <td>8.8/10</td>
+    </tr>
+
+</table>
+
+<hr>
+<h2>
+    <font color="darkgreen">
+        Submit Your Movie Review
+    </font>
+</h2>
+
+<h2>
+    <font color="darkgreen">
+        Submit Your Movie Review
+    </font>
+</h2>
+
+<form id="reviewForm">
+
+    <b>Name:</b><br>
+    <input type="text" id="name" required>
+
+    <br><br>
+
+    <b>Movie Name:</b><br>
+    <input type="text" id="movie" required>
+
+    <br><br>
+
+    <b>Favorite Genre:</b><br>
+
+    <select id="genre">
+        <option>Action</option>
+        <option>Comedy</option>
+        <option>Drama</option>
+        <option>Sci-Fi</option>
+        <option>Thriller</option>
+    </select>
+
+    <br><br>
+
+    <b>Movie Rating:</b><br>
+
+    <label>
+        <input type="radio" name="rating" value="Excellent" required>
+        Excellent
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="Good">
+        Good
+    </label>
+
+    <label>
+        <input type="radio" name="rating" value="Average">
+        Average
+    </label>
+
+    <br><br>
+
+    <b>Your Review:</b><br>
+
+    <textarea id="review" rows="5" cols="40" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Submit Review</button>
+
+</form>
+
+<script>
+
+const API_URL = "https://script.google.com/macros/s/AKfycbw1W-PeoB6YJNg__VERurybPhlqAsZ6LsWFJIHhGTryEE5FDbvF_Me8-rZjBZ5dW71Q/exec";
+
+document.getElementById("reviewForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const data = {
+
+        action:"insert",
+
+        id:Date.now(),
+
+        name:document.getElementById("name").value,
+
+        movie:document.getElementById("movie").value,
+
+        genre:document.getElementById("genre").value,
+
+        rating:document.querySelector('input[name="rating"]:checked').value,
+
+        review:document.getElementById("review").value,
+
+        date:new Date().toLocaleString()
+
+    };
+
+    fetch(API_URL,{
+
+        method:"POST",
+
+        body:JSON.stringify(data)
+
+    })
+
+    .then(response=>response.text())
+
+    .then(result=>{
+
+        alert("Review submitted successfully!");
+
+        window.location.href="reviews.html";
+
+    })
+
+    .catch(error=>{
+
+        alert("Error submitting review!");
+
+        console.log(error);
+
+    });
+
+});
+
+</script>
+
+<hr>
+
+<center>
+    <i>Thank you for visiting Movie Recommendation Hub!</i>
+</center>
+
+</body>
+</html>
+
+</body>
+</html>
