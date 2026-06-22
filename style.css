@@ -1,0 +1,32 @@
+
+body{
+    text-align: center;
+    background-color:#F3CCDE;
+    color: purple;
+}
+h1{
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    color:#6A0572;
+}
+h3{
+    font-family: 'Georgia', serif;
+    font-size: 33px;
+    color:#800020;
+}
+h2{
+    font-family: 'Georgia', serif;
+    font-size: 33px;
+    color:#9D4E6A;
+}
+p{
+    text-align:justify
+    color:#9D4E6A;
+    font-size: 18px;
+}
+a{
+    color: #5A189A;
+    text-decoration: none;
+}
+}
+}

@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>movie recommendation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#242424" text="white">
+<body>
 
  
 <center>
 
     <h1>
-        <font color="magenta" size="7" face="Comic Sans MS">
-            🎬 Movie Recommendation Hub 🎬
+        <font >
+            🎬✨ Movie Recommendation Hub ✨🎬
         </font>
     </h1>
 
     <h3>
-        <font color="blue" face="Verdana">
+        <font >
             Discover • Review • Recommend
         </font>
     </h3>
@@ -30,35 +31,35 @@
 
 <hr>
 <center> 
-<h2>
-    <font color="purple">Featured Movies</font>
-</h2>
+<h3>
+    <font >🌟🎬Featured Movies🌟🎬</font>
+</h3>
 </center>
 
 <center>
     <img src="inception.jpg"
-         alt="Inception"
+         alt="Inception🧠🌀"
          width="200"
          height="300">
 
     <img src="spiderman.jpg"
-         alt="spiderman : no way home"
+         alt="spiderman : no way home🕷️🕸️"
         width="200"
         height="300">
          
 
     <img src="interstellar.jpg"
-         alt="Interstellar"
+         alt="Interstellar⏳🪐"
          width="200"
          height="300">
 
     <img src="avangers.jpg"
-         alt="Avengers Endgame"
+         alt="Avengers Endgame⚡🛡️"
          width="200"
          height="300">
 
     <img src="joker.jpg"
-         alt="Joker"
+         alt="Joker🎭🃏"
          width="200"
          height="300">
 
@@ -67,38 +68,30 @@
 <br>
 
 <center>
-<marquee>
-    <a href=" https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm"
-       target="joker_trailer">||
-        Watch Joker Trailer||
-    <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm"
-       target="interstellar_trailer">||
-        Watch Interstellar Trailer||
-    <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" 
-         target="avengers_trailer">||
-        Watch Avengers Trailer ||
-       
-    </a>
-</marquee> 
+   
+        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="joker_trailer">|| Watch Joker Trailer ||</a>
+        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="interstellar_trailer">|| Watch Interstellar Trailer ||</a>
+        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="avengers_trailer">|| Watch Avengers Trailer ||</a>
+    
 </center>
 
 <hr>
-<h2>
-    <font color="green">Popular Movie Recommendations</font>
-</h2>
-<ul>
-    <li>Interstellar</li>
-    <li>Avengers: Endgame</li>
-    <li>Joker</li>
-    <li>Inception</li>
-    <li>Spider-Man: No Way Home</li>
-</ul>
-  
+<h3>
+    <font color= #5A189A>🍿✨Popular Movie Recommendations🍿✨</font>
+</h3>
+<p>
+    Interstellar<br>
+    Avengers: Endgame<br>
+    Joker<br>
+    Inception<br>
+    Spider-Man: No Way Home<br>
+</p>
+
 <hr>
 <h2>
-    <font color="brown">Recent Movie Collection</font>
+    <font color=#5A189A>🆕🎬Recent Movie Collection🆕🎬</font>
 </h2>
-
+<center>
 <table border="1" cellpadding="10">
 
     <tr>
@@ -130,29 +123,34 @@
     </tr>
 
 </table>
+</center>
 
 <hr>
-<h2>
-    <font color="darkgreen">
+<h3>
+    <font color=#5A189A>
         Submit Your Movie Review
     </font>
-</h2>
+</h3>
 
-<form id="reviewForm">
+<form action="https://script.google.com/macros/s/AKfycbyqj8iU8tZ_5DhsQWqGwBA3k33rYYIoqJ2xG9xpjNHaD-7XMOZpd3rJOpm0tYc9l-Tu7w/exec"
+method="post">
 
-    <b>Name:</b><br>
-    <input type="text" id="name" required>
-
-    <br><br>
-
-    <b>Movie Name:</b><br>
-    <input type="text" id="movie" required>
+    <b>Name:</b>
+    <br>
+    <input type="text" name="name">
 
     <br><br>
 
-    <b>Favorite Genre:</b><br>
+    <b>Movie Name:</b>
+    <br>
+    <input type="text" name="movie">
 
-    <select id="genre">
+    <br><br>
+
+    <b>Favorite Genre:</b>
+    <br>
+
+    <select name="genre">
         <option>Action</option>
         <option>Comedy</option>
         <option>Drama</option>
@@ -162,94 +160,73 @@
 
     <br><br>
 
-    <b>Movie Rating:</b><br>
+    <b>Movie Rating:</b>
+    <br>
 
     <label>
-        <input type="radio" name="rating" value="Excellent" required>
-        Excellent
+        <input type="radio" name="rating" value="EXCELLENT"> EXCELLENT
     </label>
-
     <label>
-        <input type="radio" name="rating" value="Good">
-        Good
+        <input type="radio" name="rating" value="GOOD"> GOOD
     </label>
-
     <label>
-        <input type="radio" name="rating" value="Average">
-        Average
+        <input type="radio" name="rating" value="AVERAGE"> AVERAGE
     </label>
 
     <br><br>
 
-    <b>Your Review:</b><br>
+    <b>Your Review:</b>
+    <br>
 
-    <textarea id="review" rows="5" cols="40" required></textarea>
+    <textarea name="review" rows="5" cols="40"></textarea>
 
     <br><br>
 
-    <button type="submit">Submit Review</button>
+    <input type="submit" value="Submit Review">
 
 </form>
 
+<hr>
+
+
+<div id="reviews"></div>
+
 <script>
+const API_URL = "https://script.google.com/macros/s/AKfycbyxQ3FOoGEfq_J50_VcgMrXhTUjKWO5DUknxEG9vBF1/dev";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbw1W-PeoB6YJNg__VERurybPhlqAsZ6LsWFJIHhGTryEE5FDbvF_Me8-rZjBZ5dW71Q/exec";
+function loadReviews() {
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(data => {
+      let html = "";
 
-document.getElementById("reviewForm").addEventListener("submit", function(e){
+      data.forEach(item => {
+        html += `
+          <div>
+            <p>${item.review}</p>
+            <button onclick="deleteReview(${item.id})">Delete</button>
+            <hr>
+          </div>
+        `;
+      });
 
-    e.preventDefault();
-
-    const data = {
-
-        action:"insert",
-
-        id:Date.now(),
-
-        name:document.getElementById("name").value,
-
-        movie:document.getElementById("movie").value,
-
-        genre:document.getElementById("genre").value,
-
-        rating:document.querySelector('input[name="rating"]:checked').value,
-
-        review:document.getElementById("review").value,
-
-        date:new Date().toLocaleString()
-
-    };
-
-    fetch(API_URL,{
-
-        method:"POST",
-
-        body:JSON.stringify(data)
-
-    })
-
-    .then(response=>response.text())
-
-    .then(result=>{
-
-        alert("Review submitted successfully!");
-
-        window.location.href="reviews.html";
-
-    })
-
-    .catch(error=>{
-
-        alert("Error submitting review!");
-
-        console.log(error);
-
+      document.getElementById("reviews").innerHTML = html;
     });
+}
 
-});
+function deleteReview(id) {
+  fetch(API_URL, {
+    method: "POST",
+    body: JSON.stringify({ id: id })
+  })
+  .then(() => {
+    loadReviews();
+  });
+}
 
+loadReviews();
 </script>
 
-<hr>
 
 <center>
     <i>Thank you for visiting Movie Recommendation Hub!</i>
@@ -257,4 +234,3 @@ document.getElementById("reviewForm").addEventListener("submit", function(e){
 
 </body>
 </html>
-
