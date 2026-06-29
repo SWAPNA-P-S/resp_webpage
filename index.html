@@ -1,238 +1,430 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>movie recommendation</title>
+    <title>Movie Recommendation Hub</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="review.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
- 
-<center>
+<!-- ================= HEADER ================= -->
 
-    <h1>
-        <font >
-            🎬✨ Movie Recommendation Hub ✨🎬
-        </font>
-    </h1>
+<header class="header">
 
-    <h3>
-        <font >
-            Discover • Review • Recommend
-        </font>
-    </h3>
+    <div class="logo">
+        <h1>🎬 Movie Recommendation Hub</h1>
+        <p>Discover • Review • Recommend</p>
+    </div>
 
-</center>
+    <nav class="navbar">
 
-<marquee>
-    ⭐ Explore the latest movies | Watch trailers | Share your reviews ⭐
-</marquee>
+        <a href="#featured">Home</a>
+        <a href="#popular">Movies</a>
+        <a href="#collection">Collection</a>
+        <a href="#review">Reviews</a>
 
-<center> 
-<h3>
-    <font >🌟🎬Featured Movies🎬🌟</font>
-</h3>
-</center>
+    </nav>
 
-<center>
-    <img src="inception.jpg"
-         alt="Inception🧠🌀"
-         width="200"
-         height="300">
+</header>
 
-    <img src="spiderman.jpg"
-         alt="spiderman : no way home🕷️🕸️"
-        width="200"
-        height="300">
-         
+<!-- ================= HERO ================= -->
 
-    <img src="interstellar.jpg"
-         alt="Interstellar⏳🪐"
-         width="200"
-         height="300">
+<section class="hero">
 
-    <img src="avangers.jpg"
-         alt="Avengers Endgame⚡🛡️"
-         width="200"
-         height="300">
+    <div class="hero-text">
 
-    <img src="joker.jpg"
-         alt="Joker🎭🃏"
-         width="200"
-         height="300">
+        <h2>Find Your Next Favorite Movie</h2>
 
-</center>
+        <p>
+            Explore the latest blockbusters, watch trailers,
+            discover amazing recommendations, and share your reviews
+            with other movie lovers.
+        </p>
 
-<br>
+        <a href="#featured" class="btn">Explore Movies</a>
 
-<center>
-   
-        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="joker_trailer">🍿Watch Joker Trailer </a>
-        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="interstellar_trailer">🍿Watch Interstellar Trailer </a>
-        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="avengers_trailer">🍿Watch Avengers Trailer </a>
-        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="spiderman_trailer">🍿Watch Spiderman Trailer </a>
-        <a href="https://youtu.be/-oVGYFp7xA0?si=xTfsXxYNmrvUm0Xm" target="inception_trailer">🍿Watch Inception Trailer 🍿</a> 
-        
-</center>
+    </div>
 
-<hr>
-<h3>
-    <font color= #5A189A>🍿✨Popular Movie Recommendations✨🍿</font>
-</h3>
-<p>
-    Interstellar<br>
-    Avengers: Endgame<br>
-    Joker<br>
-    Inception<br>
-    Spider-Man: No Way Home<br>
-</p>
+</section>
 
-<hr>
-<h2>
-    <font color=#5A189A>🆕🎬Recent Movie Collection🎬🆕</font>
-</h2>
-<center>
-<table border="1" cellpadding="10">
+<!-- ================= FEATURED MOVIES ================= -->
 
-    <tr>
-        <th>Movie Name</th>
-        <th>Genre</th>
-        <th>Year</th>
-        <th>Rating</th>
-    </tr>
+<section id="featured">
 
-    <tr>
-        <td>Interstellar</td>
-        <td>Sci-Fi</td>
-        <td>2014</td>
-        <td>9.5/10</td>
-    </tr>
+<h2 class="section-title">🌟 Featured Movies 🌟</h2>
 
-    <tr>
-        <td>Avengers: Endgame</td>
-        <td>Action</td>
-        <td>2019</td>
-        <td>9/10</td>
-    </tr>
+<div class="movie-container">
 
-    <tr>
-        <td>Joker</td>
-        <td>Drama</td>
-        <td>2019</td>
-        <td>8.8/10</td>
-    </tr>
+<div class="movie-card">
+
+<img src="inception.jpg" alt="Inception">
+
+<h3>Inception</h3>
+
+<p>Sci-Fi | 2010</p>
+
+<a href="https://youtu.be/YoHD9XEInc0" target="_blank" class="btn">
+Watch Trailer
+</a>
+
+</div>
+
+<div class="movie-card">
+
+<img src="spiderman.jpg" alt="Spider-Man">
+
+<h3>Spider-Man: No Way Home</h3>
+
+<p>Action | 2021</p>
+
+<a href="https://youtu.be/JfVOs4VSpmA" target="_blank" class="btn">
+Watch Trailer
+</a>
+
+</div>
+
+<div class="movie-card">
+
+<img src="interstellar.jpg" alt="Interstellar">
+
+<h3>Interstellar</h3>
+
+<p>Sci-Fi | 2014</p>
+
+<a href="https://youtu.be/zSWdZVtXT7E" target="_blank" class="btn">
+Watch Trailer
+</a>
+
+</div>
+
+<div class="movie-card">
+
+<img src="avangers.jpg" alt="Avengers Endgame">
+
+<h3>Avengers: Endgame</h3>
+
+<p>Action | 2019</p>
+
+<a href="https://youtu.be/TcMBFSGVi1c" target="_blank" class="btn">
+Watch Trailer
+</a>
+
+</div>
+
+<div class="movie-card">
+
+<img src="joker.jpg" alt="Joker">
+
+<h3>Joker</h3>
+
+<p>Drama | 2019</p>
+
+<a href="https://youtu.be/zAGVQLHvwOY" target="_blank" class="btn">
+Watch Trailer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= POPULAR MOVIES ================= -->
+
+<section id="popular">
+
+<h2 class="section-title">🍿 Popular Recommendations 🍿</h2>
+
+<div class="recommend-box">
+
+<ul>
+
+<li>⭐ Interstellar</li>
+
+<li>⭐ Inception</li>
+
+<li>⭐ Spider-Man: No Way Home</li>
+
+<li>⭐ Avengers: Endgame</li>
+
+<li>⭐ Joker</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= TABLE ================= -->
+
+<section id="collection">
+
+<h2 class="section-title">🆕 Recent Movie Collection</h2>
+
+<div class="table-box">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Movie</th>
+
+<th>Genre</th>
+
+<th>Year</th>
+
+<th>Rating</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Interstellar</td>
+
+<td>Sci-Fi</td>
+
+<td>2014</td>
+
+<td>9.5/10</td>
+
+</tr>
+
+<tr>
+
+<td>Avengers: Endgame</td>
+
+<td>Action</td>
+
+<td>2019</td>
+
+<td>9.2/10</td>
+
+</tr>
+
+<tr>
+
+<td>Joker</td>
+
+<td>Drama</td>
+
+<td>2019</td>
+
+<td>8.8/10</td>
+
+</tr>
+
+<tr>
+
+<td>Spider-Man: No Way Home</td>
+
+<td>Action</td>
+
+<td>2021</td>
+
+<td>9.1/10</td>
+
+</tr>
+
+<tr>
+
+<td>Inception</td>
+
+<td>Sci-Fi</td>
+
+<td>2010</td>
+
+<td>9.4/10</td>
+
+</tr>
+
+</tbody>
 
 </table>
-</center>
 
-<hr>
-<h3>
-    <font color=#5A189A>
-        Submit Movie Review
-    </font>
-</h3>
+</div>
+
+</section>
+
+<!-- ================= REVIEW FORM ================= -->
+
+<section id="review">
+
+<h2 class="section-title">📝 Submit Your Review</h2>
+
+<div class="form-box">
 
 <form action="https://script.google.com/macros/s/AKfycbyqj8iU8tZ_5DhsQWqGwBA3k33rYYIoqJ2xG9xpjNHaD-7XMOZpd3rJOpm0tYc9l-Tu7w/exec"
-method="post">
+method="POST">
 
-    <b>Name:</b>
-    <br>
-    <input type="text" name="name">
+<label>Name</label>
 
-    <br><br>
+<input
+type="text"
+name="name"
+placeholder="Enter your name"
+required>
 
-    <b>Movie Name:</b>
-    <br>
-    <input type="text" name="movie">
+<label>Movie Name</label>
 
-    <br><br>
+<input
+type="text"
+name="movie"
+placeholder="Movie name"
+required>
 
-    <b>Favorite Genre:</b>
-    <br>
+<label>Favorite Genre</label>
 
-    <select name="genre">
-        <option>Action</option>
-        <option>Comedy</option>
-        <option>Drama</option>
-        <option>Sci-Fi</option>
-        <option>Thriller</option>
-    </select>
+<select name="genre">
 
-    <br><br>
+<option>Action</option>
+<option>Comedy</option>
+<option>Drama</option>
+<option>Sci-Fi</option>
+<option>Thriller</option>
 
-    <b>Movie Rating:</b>
-    <br>
+</select>
 
-    <label>
-        <input type="radio" name="rating" value="EXCELLENT"> EXCELLENT
-    </label>
-    <label>
-        <input type="radio" name="rating" value="GOOD"> GOOD
-    </label>
-    <label>
-        <input type="radio" name="rating" value="AVERAGE"> AVERAGE
-    </label>
+<label>Movie Rating</label>
 
-    <br><br>
+<div class="radio-group">
 
-    <b>Your Review:</b>
-    <br>
+<label>
+<input type="radio" name="rating" value="Excellent">
+Excellent
+</label>
 
-    <textarea name="review" rows="5" cols="40"></textarea>
+<label>
+<input type="radio" name="rating" value="Good">
+Good
+</label>
 
-    <br><br>
+<label>
+<input type="radio" name="rating" value="Average">
+Average
+</label>
 
-    <input type="submit" value="Submit Review">
+</div>
+
+<label>Your Review</label>
+
+<textarea
+name="review"
+rows="5"
+placeholder="Write your review..."
+required></textarea>
+
+<input
+type="submit"
+value="Submit Review"
+class="submit-btn">
 
 </form>
 
-<hr>
+</div>
 
+</section>
+
+<!-- ================= USER REVIEWS ================= -->
+
+<section>
+
+<h2 class="section-title">💬 User Reviews</h2>
 
 <div id="reviews"></div>
 
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Movie Recommendation Hub
+
+<br>
+
+Created by Swapna
+
+</p>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+
 <script>
-const API_URL = "https://script.google.com/macros/s/AKfycbyxQ3FOoGEfq_J50_VcgMrXhTUjKWO5DUknxEG9vBF1/dev";
 
-function loadReviews() {
-  fetch(API_URL)
-    .then(res => res.json())
-    .then(data => {
-      let html = "";
+const API_URL="https://script.google.com/macros/s/AKfycbyxQ3FOoGEfq_J50_VcgMrXhTUjKWO5DUknxEG9vBF1/dev";
 
-      data.forEach(item => {
-        html += `
-          <div>
-            <p>${item.review}</p>
-            <button onclick="deleteReview(${item.id})">Delete</button>
-            <hr>
-          </div>
-        `;
-      });
+function loadReviews(){
 
-      document.getElementById("reviews").innerHTML = html;
-    });
+fetch(API_URL)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let html="";
+
+data.forEach(item=>{
+
+html+=`
+<div class="review-card">
+
+<h3>${item.movie || "Movie Review"}</h3>
+
+<p>${item.review}</p>
+
+<button onclick="deleteReview(${item.id})">
+
+Delete
+
+</button>
+
+</div>
+`;
+
+});
+
+document.getElementById("reviews").innerHTML=html;
+
+});
+
 }
 
-function deleteReview(id) {
-  fetch(API_URL, {
-    method: "POST",
-    body: JSON.stringify({ id: id })
-  })
-  .then(() => {
-    loadReviews();
-  });
+function deleteReview(id){
+
+fetch(API_URL,{
+
+method:"POST",
+
+body:JSON.stringify({id:id})
+
+})
+
+.then(()=>loadReviews());
+
 }
 
 loadReviews();
+
 </script>
-
-
-<center>
-    <i>Thank you for visiting Movie Recommendation Hub!</i>
-</center>
 
 </body>
 </html>
+```
