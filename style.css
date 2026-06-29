@@ -1,36 +1,625 @@
+/* ===============================
+   RESET
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-    text-align: center;
-    background-color:#F3CCDE;
-    color: purple;
-}
-h1{
-    font-family: 'Arial', sans-serif;
-    font-size: 48px;
-    color:#6A0572;
-}
-h3{
-    font-family: 'Georgia', serif;
-    font-size: 33px;
-    color:#800020;
-}
-h2{
-    font-family: 'Georgia', serif;
-    font-size: 33px;
-    color:#9D4E6A;
-}
-p{
-    text-align:justify
-    color:#9D4E6A;
-    font-size: 18px;
-}
-a{
-    color: #5A189A;
-    text-decoration: none;
+
+    font-family:'Poppins',Arial,sans-serif;
+
+    background:#f8f5ff;
+
+    color:#333;
+
 }
 
+
+/* ===============================
+   HEADER
+================================= */
+
+.header{
+
+    background:linear-gradient(135deg,#5A189A,#9D4EDD);
+
+    color:white;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+.logo h1{
+
+    font-size:35px;
+
+}
+
+
+.logo p{
+
+    font-size:18px;
+
+}
+
+
+/* ===============================
+   NAVBAR
+================================= */
+
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.navbar a:hover{
+
+    color:#FFD60A;
+
+}
+
+
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+
+.hero{
+
+    height:450px;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+
+    url("joker.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.hero-text{
+
+    width:70%;
+
+}
+
+
+.hero h2{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+
+
+/* ===============================
+   BUTTON
+================================= */
+
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#6A0572;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    background:#3c096c;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ===============================
+   SECTIONS
+================================= */
+
+
+section{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:50px 0;
+
+}
+
+
+.section-title{
+
+    text-align:center;
+
+    color:#6A0572;
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* ===============================
+   MOVIE CARDS
+================================= */
+
+
+.movie-container{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.movie-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+    text-align:center;
+
+}
+
+
+
+.movie-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.movie-card img{
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+}
+
+
+
+.movie-card h3{
+
+    color:#6A0572;
+
+    margin:15px;
+
+}
+
+
+.movie-card p{
+
+    color:#666;
+
+}
+
+
+
+.movie-card .btn{
+
+    width:80%;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ===============================
+   RECOMMEND BOX
+================================= */
+
+
+.recommend-box{
+
+    background:white;
+
+    width:70%;
+
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.1);
+
+}
+
+
+.recommend-box li{
+
+    list-style:none;
+
+    padding:12px;
+
+    border-bottom:1px solid #ddd;
+
+    font-size:18px;
+
+}
+
+
+
+/* ===============================
+   TABLE
+================================= */
+
+
+.table-box{
+
+    overflow-x:auto;
+
+}
+
+
 table{
-    border-color:#9D4E6A
+
+    width:90%;
+
+    margin:auto;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.1);
+
 }
+
+
+th{
+
+    background:#6A0572;
+
+    color:white;
+
+    padding:15px;
+
 }
+
+
+td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+tr:hover{
+
+    background:#f3e8ff;
+
+}
+
+
+
+/* ===============================
+   FORM
+================================= */
+
+
+.form-box{
+
+    width:500px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+form label{
+
+    font-weight:600;
+
+}
+
+
+input,
+select,
+textarea{
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0 20px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+}
+
+
+textarea{
+
+    resize:none;
+
+}
+
+
+.radio-group{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+.submit-btn{
+
+    background:#6A0572;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+.submit-btn:hover{
+
+    background:#3c096c;
+
+}
+
+
+
+/* ===============================
+   REVIEWS
+================================= */
+
+
+#reviews{
+
+    width:80%;
+
+    margin:auto;
+
+}
+
+
+.review-card{
+
+    background:white;
+
+    padding:20px;
+
+    margin:20px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.review-card button{
+
+    background:#e63946;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+.review-card button:hover{
+
+    background:#b5171f;
+
+}
+
+
+
+/* ===============================
+   FOOTER
+================================= */
+
+
+footer{
+
+    background:#5A189A;
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================= */
+
+
+@media(max-width:768px){
+
+
+.header{
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+.logo h1{
+
+    font-size:28px;
+
+}
+
+
+.hero h2{
+
+    font-size:32px;
+
+}
+
+
+.hero-text{
+
+    width:90%;
+
+}
+
+
+.navbar{
+
+    margin-top:20px;
+
+}
+
+
+.movie-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.recommend-box{
+
+    width:95%;
+
+}
+
+
 }
