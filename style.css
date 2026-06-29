@@ -28,16 +28,7 @@ a{
     color: #5A189A;
     text-decoration: none;
 }
-section{
-    width:90%;
-    max-width:1200px;
-    margin:40px auto;
-    padding:25px;
-    background:#1a1a1a;
-    border-radius:18px;
-    box-shadow:0 0 15px rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-}
+
 table{
     border-color:#9D4E6A
 }
